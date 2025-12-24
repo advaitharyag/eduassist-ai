@@ -139,28 +139,44 @@ LIMIT: 700_words
         body: JSON.stringify({
           message: `
 ROLE: programming_tutor
-TASK: pseudocode_to_python
+TASK: pseudocode_to_code
 
 INPUT:
 ${codeInput}
 
-OUTPUT:
-- python_code 
-- java_code
-- c_code
-- explanation_steps
+LANGUAGES:
+- Python
+- Java
+- C
 
 RULES:
+- generate_all_languages
 - code_first
 - no_comments_in_code
 - no_greetings
 - beginner_friendly
+- follow_exact_format
 
 FORMAT:
-[CODE]
+Python:
+\`\`\`python
+<python_code>
+\`\`\`
+
+Java:
+\`\`\`java
+<java_code>
+\`\`\`
+
+C:
+\`\`\`c
+<c_code>
+\`\`\`
+
 Explanation:
 - Step 1
 - Step 2
+- Step 3
 `,
           context: { role: "student", feature: "pseudocode-converter" },
         }),
