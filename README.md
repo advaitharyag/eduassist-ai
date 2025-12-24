@@ -84,4 +84,4 @@ We built this using some of the best modern web tools out there:
 
 ---
 
-*This project is a demonstration of what's possible with AI in education. Happy learning!*
+
