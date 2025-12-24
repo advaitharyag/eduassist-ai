@@ -145,7 +145,9 @@ INPUT:
 ${codeInput}
 
 OUTPUT:
-- python_code
+- python_code 
+- java_code
+- c_code
 - explanation_steps
 
 RULES:
